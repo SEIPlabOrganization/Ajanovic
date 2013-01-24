@@ -69,4 +69,44 @@
     <servlet-name>CreateTeamServlet</servlet-name>
     <url-pattern>/CreateTeamServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>SubjectServlet</display-name>
+    <servlet-name>SubjectServlet</servlet-name>
+    <servlet-class>project1.SubjectServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SubjectServlet</servlet-name>
+    <url-pattern>/SubjectServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>NewProjectServlet</display-name>
+    <servlet-name>NewProjectServlet</servlet-name>
+    <servlet-class>project1.NewProjectServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>NewProjectServlet</servlet-name>
+    <url-pattern>/NewProjectServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>PickAssignmentServlet</display-name>
+    <servlet-name>PickAssignmentServlet</servlet-name>
+    <servlet-class>project1.PickAssignmentServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PickAssignmentServlet</servlet-name>
+    <url-pattern>/PickAssignmentServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>AsignProjectAssignmentServlet</display-name>
+    <servlet-name>AsignProjectAssignmentServlet</servlet-name>
+    <servlet-class>project1.AsignProjectAssignmentServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AsignProjectAssignmentServlet</servlet-name>
+    <url-pattern>/AsignProjectAssignmentServlet</url-pattern>
+  </servlet-mapping>
 </web-app>

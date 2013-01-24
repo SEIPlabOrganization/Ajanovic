@@ -23,9 +23,9 @@ public class ResponsibilitiesServlet extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		
 		try {	
-			MySQLcon database = new MySQLcon("jdbc:mysql://localhost:3306/mydb", "a", "a");
+			MySQLcon database = new MySQLcon("jdbc:mysql://localhost:3306/project", "a", "a");
 			
-			ResultSet responsibilities = database.Quer("select responsibility.name from Responsibility");
+			ResultSet responsibilities = database.Quer("SELECT responsibility.name from Responsibility WHERE NOT idResponsibility=1;");
 
 			out.println("<select name='zaduzenja'>");
 				

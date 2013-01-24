@@ -8,8 +8,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
-import com.mysql.jdbc.ResultSetMetaData;
+import javax.servlet.http.HttpSession;
 
 public class CreateTeamServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -20,18 +19,19 @@ public class CreateTeamServlet extends HttpServlet {
     }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		//Catching team leader jmbag
+		//HttpSession session = request.getSession(true);
+		//String JMBAGTeamLeader = session.getAttribute("userid").toString();
+		
 		
 		String TeamName = request.getParameter("TeamName");
 		String JMBAGTeamLeader = request.getParameter("JMBAGTeamLeader");
-		String JMBAGMember = request.getParameter("JMBAGMember");
-		String ProjectName = request.getParameter("ProjectName");
-		String zaduzenja = request.getParameter("zaduzenja");
+		
 		String TeamId = "50";
-		String responsib = "nes";
 		
 		try {
 		
-			MySQLcon db = new MySQLcon("jdbc:mysql://localhost:3306/mydb","a","a");
+			MySQLcon db = new MySQLcon("jdbc:mysql://localhost:3306/project","a","a");
 			
 			db.Upd("INSERT INTO team SET name='" + TeamName + "';");
 			
@@ -41,15 +41,10 @@ public class CreateTeamServlet extends HttpServlet {
 				TeamId = res1.getString(1);
 			}
 			
-			ResultSet res2 = db.Quer("SELECT responsibility.idResponsibility FROM Responsibility WHERE name='" + zaduzenja + "';");
 			
-			while (res2.next()) {
-				responsib = res2.getString(1);
-			}
-			
-			if (db.Upd("INSERT INTO users_team SET Team_idTeam='" + TeamId + "', Users_idUsers='" + JMBAGTeamLeader + "', Responsibility_idResponsibility='1';") && db.Upd("INSERT INTO users_team SET Team_idTeam='" + TeamId + "', Users_idUsers='" + JMBAGMember + "', Responsibility_idResponsibility='" + responsib + "';")) {
+			if (db.Upd("INSERT INTO users_team SET Team_idTeam='" + TeamId + "', Users_idUsers='" + JMBAGTeamLeader + "', Responsibility_idResponsibility='1';")) {
 				
-				RequestDispatcher rd = request.getRequestDispatcher("SuccessNewProjectAssignements.jsp");
+				RequestDispatcher rd = request.getRequestDispatcher("SuccessNewTeam.jsp");
 				rd.forward(request, response);
 
 			}

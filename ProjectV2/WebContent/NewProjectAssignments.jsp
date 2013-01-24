@@ -17,7 +17,6 @@
 			<tr><td align="right">Proposal Name:</td><td><input type="text" size="67" name="ImeZadatka"></td></tr>
 			<tr><td align="right">Assignment Description:</td><td><textarea rows="4" cols="50" name="DescriptionZadatka"></textarea></td></tr>
 			<tr><td align="right">Preparation for assignment and suggested readings:</td><td><textarea rows="4" cols="50" name="DescriptionZadatkaZaPripremu"></textarea></td></tr>
-			<tr><td align="right">Project ID:</td><td><input type="text" size="67" name="idProject" /></td></tr>
 			<tr><td align="right"><input type="submit" value="Create!" /></td></tr>
 		</form>
 	</table>

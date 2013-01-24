@@ -28,12 +28,6 @@
 		<tr><td>Team name:</td><td><input type="text" size="67" name="TeamName"></td></tr>
 		<tr><td>Team Leader JMBAG:</td><td><input type="text" size="67" name="JMBAGTeamLeader" /></td></tr>
 		
-		<tr><td>Project name:</td><td><input type="text" size="67" name="ProjectName" /></td></tr>
-		
-		<tr><td>Member Responsibility:</td><td><jsp:include page="/ResponsibilitiesServlet" /></td></tr>
-		<tr><td>Member JMBAG:</td><td><input type="text" size="67" name="JMBAGMember" /></td></tr>
-		
-		
 		
 	</table>
 		<input type="submit" value="Create!" />		

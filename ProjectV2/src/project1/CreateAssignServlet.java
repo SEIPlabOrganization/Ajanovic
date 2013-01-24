@@ -25,12 +25,11 @@ public class CreateAssignServlet extends HttpServlet {
 		String proposerName = request.getParameter("ImeAutoraZadatka");
 		String description = request.getParameter("DescriptionZadatka");
 		String suggReading = request.getParameter("DescriptionZadatkaZaPripremu");
-		int idProject = Integer.parseInt(request.getParameter("idProject"));
 		
 		
 		MySQLcon db = new MySQLcon("jdbc:mysql://localhost:3306/project","a","a");
 		
-		if (db.Upd("INSERT INTO project_assignements SET name='" + proposalName + "', author='" + proposerName + "', description='" + description + "', prep_sugg_reading='" + suggReading + "', Project_idProject='" + idProject + "';")) {
+		if (db.Upd("INSERT INTO project_assignements SET name='" + proposalName + "', author='" + proposerName + "', description='" + description + "', prep_sugg_reading='" + suggReading + "';")) {
 			
 			RequestDispatcher rd = request.getRequestDispatcher("SuccessNewProjectAssignements.jsp");
 			rd.forward(request, response);

@@ -35,7 +35,7 @@ public class AssignmentsViewServlet extends HttpServlet {
 			
 			out.print("<h1>Project Assignments Overview</h1>");
 			out.print("<table border=\"1\">");
-			
+			out.print("<tr><td>Assignment Id</td><td>Assignment name</td><td>Author</td><td>Prefix</td><td>Description</td><td>Sugested reading</td><td>Project ID</td><td>Version</td></tr>");
 			while (r.next()) {
 				out.print("<tr>");
 				for (int i = 1; i <= numberOfColumns; i++)

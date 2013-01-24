@@ -8,8 +8,17 @@
 </head>
 <body>
 	<h2></h2>
+	
+	<input type="button" value="Create New Project Assignment" onclick="window.location='/ProjectV2/NewProjectAssignments.jsp';" />
+	
+	
+	
 	<table border="0">
+	
+	
 		<tr><td><b>You have successfully inserted data into table!!</b></td></tr>
+		
+		
 	</table>
 </body>
 </html>
