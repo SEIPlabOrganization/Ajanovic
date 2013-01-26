@@ -1,7 +1,6 @@
 package project1;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.sql.ResultSet;
 
 import javax.servlet.RequestDispatcher;
@@ -20,7 +19,7 @@ public class MoreMembersServlet extends HttpServlet {
 
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		PrintWriter out = response.getWriter();
+
 		
 		String responsibility = request.getParameter("zaduzenja");
 		String JMBAGMember = request.getParameter("JMBAGMember");

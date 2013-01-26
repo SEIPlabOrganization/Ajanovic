@@ -7,7 +7,7 @@
 	<title>New Project Assignments - Success!</title>
 </head>
 <body>
-	<h2></h2>
+	
 	
 	<input type="button" value="Create New Project Assignment" onclick="window.location='/ProjectV2/NewProjectAssignments.jsp';" />
 	

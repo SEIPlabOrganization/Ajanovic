@@ -5,34 +5,24 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Create Team</title>
-	<script>
-	
-	function clear();
-	
-	
-	</script>
 </head>
 <body>
-
-	<script  type="text/javascript">
-		tmp;
-		temp=1;
-	</script>
 	
 	<h1>Create new team and new project:</h1>
 	<table id="tableID" border="0" align="center">
 	
-<div id="idDiv">	
+	<div id="idDiv">	
 	<form action="CreateTeamServlet" method="POST">
 	
 		<tr><td>Team name:</td><td><input type="text" size="67" name="TeamName"></td></tr>
+		<!-- This will be removed since we get this data from session -->
 		<tr><td>Team Leader JMBAG:</td><td><input type="text" size="67" name="JMBAGTeamLeader" /></td></tr>
 		
 		
 	</table>
 		<input type="submit" value="Create!" />		
 	</form>
-</div>
+	</div>
 
 </body>
 </html>
